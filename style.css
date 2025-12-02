@@ -38,7 +38,7 @@
   font: 12px/1.5 Fira Sans, Helvetica, Arial, sans-serif;
   color: #222;
   color: var(--text-color);
-  --bg-color: #ffffff;
+  --bg-color: beige;
   --text-color: #222;
   --link-color: #3873ad;
   --code-bg: #f5f5f5;
