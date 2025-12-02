@@ -183,7 +183,7 @@ footer {
 
 .legend {
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: flex;
   gap: 2rem;
 }
@@ -207,28 +207,7 @@ footer {
   /* yellow */
 }
 
-.legend {
-  margin-bottom: 1rem;
-  font-size: 2.4rem;
-  display: flex;
-  gap: 3rem;
-}
 
-.legend-item {
-  font-weight: bold;
-}
-
-.legend-item.ok {
-  color: #2ecc71;
-}
-
-.legend-item.no {
-  color: #e74c3c;
-}
-
-.legend-item.maybe {
-  color: #f1c40f;
-}
 
 /* Table tick styling */
 td.ok::before {
