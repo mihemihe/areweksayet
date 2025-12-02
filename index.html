@@ -6,6 +6,10 @@
 <link rel="icon" href="favicon.ico">
 
 <body>
+  <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="icon" aria-hidden="true">☀️</span>
+    <span class="label">Light</span>
+  </button>
   <div class="disclaimer">
     Unofficial fan-made page; not linked to RocketWerkz or KSA development.
   </div>
@@ -1767,5 +1771,27 @@
 
   <a class="github-ribbon" href="https://github.com/mihemihe/areweksayet">Fork me on GitHub</a>
 </body>
+
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+  function setTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    themeToggle.setAttribute('aria-pressed', theme === 'dark');
+    themeToggle.querySelector('.label').textContent = theme === 'dark' ? 'Dark' : 'Light';
+    themeToggle.querySelector('.icon').textContent = theme === 'dark' ? '🌙' : '☀️';
+    localStorage.setItem('theme', theme);
+  }
+
+  setTheme(initialTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+    setTheme(nextTheme);
+  });
+</script>
 
 </html>
