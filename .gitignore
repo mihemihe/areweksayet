@@ -1,0 +1,6 @@
+# Visual Studio / VSCode .vs folder
+.vs/
+
+
+# All text files
+*.txt
