@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 9th December 2025
+    Last update: 31st May 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -86,7 +86,7 @@
         <td>Physics simulation</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>No info yet.</td>
+        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. No soft-body or aero-lift yet.</td>
       </tr>
       <tr>
         <td>Aerodynamics and atmospheres</td>
@@ -104,7 +104,7 @@
         <td>Rocket construction</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Basic rocket builder in debug mode</td>
+        <td>Basic debug rocket editor with snap-fit part placement, stage assignment, save/load and launch.</td>
       </tr>
       <tr>
         <td>Attitude control and RCS</td>
@@ -114,9 +114,9 @@
       </tr>
       <tr>
         <td>Staging</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Functional staging. Sequences are the activation groups. Stages are part groupings.</td>
       </tr>
       <tr>
         <td>Space center and launch complex</td>
@@ -187,9 +187,9 @@
       </tr>
       <tr>
         <td>Automatic maneuvers (circularice, rendezvous, etc...)</td>
-        <td class="no"></td>
+        <td class="maybe"></td>
         <td class="ok"></td>
-        <td>There is a modder working on this. "ModNameGoesHere"
+        <td>Stock Transfer Planner can create circularize burns (apoapsis or periapsis). No stock auto-rendezvous yet. Modders working on more.
           <a href="https://forums.ahwoo.com/threads/kitten-engineer-redux-ker.443/" target="_blank">
             (Barney) KittenEngineerRedux
           </a>
@@ -197,9 +197,9 @@
       </tr>
       <tr>
         <td>Encounter/flyby planning</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Stock Transfer Planner computes encounters via a Lambert solver and patched conics; flyby and intercept data shown on the porkchop plot.</td>
       </tr>
       <tr>
         <td>N-body (Principia style)</td>
@@ -250,9 +250,9 @@
     <tbody>
       <tr>
         <td>Lift and drag</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Simple drag is applied. No lift model.</td>
       </tr>
       <tr>
         <td>Aerodynamics (FAR like)</td>
@@ -274,9 +274,9 @@
       </tr>
       <tr>
         <td>Landing gear and steering</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Deployable animated landing legs exist. No wheel, steering or suspension physics.</td>
       </tr>
       <tr>
         <td>Supersonic and hypersonic stability</td>
@@ -298,10 +298,10 @@
       </tr>
       <tr>
         <td>Flight assistance</td>
-        <td class="no"></td>
+        <td class="ok"></td>
         <td class="maybe"></td>
         <td>
-          Some modders working on a mod for this.
+          Stock SAS provides rate hold and attitude hold (prograde, retrograde, normal, radial, target) via the FlightComputer. Some modders working on more.
           <a href="https://forums.ahwoo.com/threads/avionics.560/" target="_blank">
             (Dejvid) Avionics
           </a>
@@ -344,9 +344,9 @@
     <tbody>
       <tr>
         <td>Capsules</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Few capsules available, mainly the 3D models.</td>
+        <td>Functional crewed capsule with IVA interior, two crew seats, built-in battery and lights.</td>
       </tr>
       <tr>
         <td>Space Planes</td>
@@ -360,7 +360,7 @@
       </tr>
       <tr>
         <td>Probe cores</td>
-        <td class="maybe"></td>
+        <td class="no"></td>
         <td class="maybe"></td>
         <td>Some modders are working on this <a
             href="https://forums.ahwoo.com/threads/probe-parts-plus-features-3-probes-sputnik-luna-and-vega-also-restores-stock-apollo-csm-and-gemini-6a.433/"
@@ -386,15 +386,15 @@
       </tr>
       <tr>
         <td>Fuel tanks</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some basic tanks and 3D models are ready.</td>
+        <td>Cylindrical (1m, 2m, 3m) and radial spherical tanks.</td>
       </tr>
       <tr>
         <td>Interstages (decouplers, separators, payload adapters)</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>First commits including fairings and interstages.</td>
+        <td>Multiple functional decouplers and interstages including a radial decoupler.</td>
       </tr>
       <tr>
         <td>Fairings</td>
@@ -416,9 +416,9 @@
       </tr>
       <tr>
         <td>Struts</td>
-        <td class="no"></td>
+        <td class="ok"></td>
         <td class="maybe"></td>
-        <td>Some modders working on it.
+        <td>Static structural truss and strut parts exist (Structural category). No dynamic stretch-to-connect strut yet. Some modders working on more.
           <a href="https://github.com/Chitak985/KSAMiscParts" target="_blank">
             (Chitak) KSAMiscParts
           </a>
@@ -438,21 +438,21 @@
       </tr>
       <tr>
         <td>Stack adapters</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Interstage bridge parts (2W-to-1W, 3W-to-2W) act as stack adapters.</td>
       </tr>
       <tr>
         <td>Radial attachments</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some work in progres the by KSA team</td>
+        <td>Radial attachment via ToSurface connectors; radial mounts, batteries and tanks available.</td>
       </tr>
       <tr>
         <td>Mounting plates</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Seven engine/mounting plate variants.</td>
       </tr>
       <tr>
         <td>Launch clamps and towers</td>
@@ -480,9 +480,9 @@
       </tr>
       <tr>
         <td>Liquid engines</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some basic engines and 3D models.</td>
+        <td>Multiple functional Hydrolox engines (LR91 variants, VTR-10). One _Dev engine uses a debug propellant.</td>
       </tr>
       <tr>
         <td>Solid rocket boosters</td>
@@ -516,9 +516,9 @@
       </tr>
       <tr>
         <td>Vernier engines</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Integrated into the LR91 Vac + Verniers engine part, each individually gimbaled.</td>
       </tr>
       <tr>
         <td>Deorbit motors</td>
@@ -558,9 +558,9 @@
       </tr>
       <tr>
         <td>Gimbal</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some 3D designs including gimbal showcased</td>
+        <td>Functional gimbal on all shipping liquid engines, driven by the FlightComputer.</td>
       </tr>
       <tr>
         <td>Wheels</td>
@@ -570,9 +570,9 @@
       </tr>
       <tr>
         <td>Landing legs and skids</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Medium landing leg with deploy/retract animation. No dedicated suspension physics yet.</td>
       </tr>
       <tr>
         <td>Parachutes</td>
@@ -582,9 +582,9 @@
       </tr>
       <tr>
         <td>Solar panels</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Fixed radial panel and deployable tracking array; power scales with sun angle and distance.</td>
       </tr>
       <tr>
         <td>RTGs</td>
@@ -594,9 +594,9 @@
       </tr>
       <tr>
         <td>Batteries</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Four battery parts plus capsule built-in; functional charge/discharge.</td>
       </tr>
       <tr>
         <td>Radiators</td>
@@ -612,9 +612,9 @@
       </tr>
       <tr>
         <td>Docking Ports</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Three docking ports with dock/undock, vehicle merge/split, proximity camera and closure-velocity HUD.</td>
       </tr>
       <tr>
         <td>Grabbing unit</td>
@@ -636,9 +636,9 @@
       </tr>
       <tr>
         <td>Lights</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some work in progres the by KSA team</td>
+        <td>Three functional light parts with rendering, power consumption and on/off animation.</td>
       </tr>
       <tr>
         <td>Containers and slots</td>
@@ -750,9 +750,9 @@
       </tr>
       <tr>
         <td>Rocket control (Smart A.S.S. like)</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>SAS attitude targets (prograde, retrograde, normal, radial, target) cover the same functions. No separate panel.</td>
       </tr>
       <tr>
         <td>Alarm clock</td>
@@ -762,9 +762,9 @@
       </tr>
       <tr>
         <td>Telemetry and charts (Flight recorder)</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Relative-trajectory (rendezvous) plot window and attitude phase-space plots exist. No general-purpose flight data recorder.</td>
       </tr>
       <tr>
         <td>Landing guidance and suicide burn</td>
@@ -774,9 +774,9 @@
       </tr>
       <tr>
         <td>Docking mode and automatic docking</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Manual docking supported (docking camera, proximity readouts, Dock attitude frame). No automatic approach and docking yet.</td>
       </tr>
       <tr>
         <td>Flight computers and scripting (KOS like)</td>
@@ -808,9 +808,9 @@
       </tr>
       <tr>
         <td>Persistent rotation (off-loaded vessels)</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Body rates (angular velocity) are saved and restored for all vehicles, including off-loaded ones.</td>
       </tr>
       <tr>
         <td>Resource dashboard (Fuel, EC, water, etc...)</td>
@@ -845,15 +845,15 @@
     <tbody>
       <tr>
         <td>Multiple propellant types</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Some work in progres the by KSA team</td>
+        <td>Three combustion processes defined (Hydrolox, Kerolox, MMH/NTO).</td>
       </tr>
       <tr>
         <td>Fuel crossfeed</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Propellant drains by part-tree graph with stage-aware ordering. No fuel lines yet.</td>
       </tr>
       <tr>
         <td>Resource transfer</td>
@@ -881,9 +881,9 @@
       </tr>
       <tr>
         <td>Power generation and storage</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Batteries, fixed and deployable solar panels, and lights as power consumers; managed by a power system.</td>
       </tr>
       <tr>
         <td>In-Situ construction and printing (Stationeers like)</td>
@@ -1049,9 +1049,9 @@
       </tr>
       <tr>
         <td>Biomes</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Biomes defined for Earth, Luna, Venus and Mars; drive terrain visuals and ambient sound. No science gameplay tied to them yet.</td>
       </tr>
       <tr>
         <td>Tech tree</td>
@@ -1305,13 +1305,13 @@
     <tbody>
       <tr>
         <td>High-res terrain and planets</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>A lot of planets have crisp textures</td>
+        <td>Tessellated terrain with biome materials, procedural modifiers, shadow maps and an in-game debug terrain editor.</td>
       </tr>
       <tr>
         <td>Atmospheric scattering</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
         <td>Functional</td>
       </tr>
@@ -1365,9 +1365,9 @@
       </tr>
       <tr>
         <td>IVA cockpits</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>IVA camera with cockpit interiors; IVA raytracing available (toggle in graphics settings, off by default).</td>
       </tr>
       <tr>
         <td>First person EVA</td>
@@ -1383,9 +1383,9 @@
       </tr>
       <tr>
         <td>Surface details (rocks, trees, craters,etc...)</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Ground clutter (rocks, vegetation by ecotype) and procedural craters, dunes and erosion, with a quality toggle.</td>
       </tr>
       <tr>
         <td>Dynamic and immersive music</td>
@@ -1491,9 +1491,9 @@
       </tr>
       <tr>
         <td>dear imGui implot extension support</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>KSA team working on library integration.
+        <td>Brutal.ImPlot.dll ships with the game and is available to mods.
           <a href="https://github.com/epezent/implot" target="_blank">
             (KSA) dear imGui implot extension
           </a>
@@ -1534,9 +1534,9 @@
       </tr>
       <tr>
         <td>Controller support</td>
-        <td class="no"></td>
         <td class="maybe"></td>
-        <td>Forums and Discord have some info about controller profiles and bindings</td>
+        <td class="maybe"></td>
+        <td>Gamepad axes are read for the free-camera. No flight-control binding or controller settings UI yet. Forums and Discord have some info about controller profiles and bindings</td>
       </tr>
       <tr>
         <td>Custom control panels support</td>
@@ -1598,9 +1598,9 @@
       </tr>
       <tr>
         <td>UI scaling and DPI settings</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Settings - Interface</td>
+        <td>Font size, density, pixel snap and custom font configurable in Interface settings.</td>
       </tr>
       <tr>
         <td>Configurable UI (drag, hide, scale, etc...)</td>
@@ -1644,9 +1644,9 @@
       </tr>
       <tr>
         <td>Languages</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>Some people are getting organized in the forums about this.</td>
+        <td>Full localization infrastructure exists (ResX-based, modder-extensible), but only en-US ships. Some people getting organized in the forums.</td>
       </tr>
       <tr>
         <td>External Data Stream (RPC, Protobuf, etc...Telemachus like)</td>
@@ -1673,9 +1673,9 @@
       </tr>
       <tr>
         <td>Game reloaders / Mods reloaders</td>
-        <td class="no"></td>
         <td class="maybe"></td>
-        <td>Some modders working on this.
+        <td class="maybe"></td>
+        <td>Stock hot shader reload exists as a dev tool; full mod hot-reload is not implemented. Some modders working on this.
           <a href="https://forums.ahwoo.com/threads/system-reloader-v0-1-0.551/" target="_blank">
             (TheRooster) SystemReloader
           </a>
@@ -1749,9 +1749,9 @@
       </tr>
       <tr>
         <td>Dwarf planets, minor bodies and irregular moons</td>
-        <td class="no"></td>
         <td class="maybe"></td>
-        <td>Some modders working on this.</td>
+        <td class="maybe"></td>
+        <td>Minor bodies (Phobos, Deimos) and some dwarf-scale objects exist; no dedicated dwarf-planet class. Some modders working on this.</td>
       </tr>
       <tr>
         <td>Asteroids and comets</td>
@@ -1761,21 +1761,21 @@
       </tr>
       <tr>
         <td>Planetary rings</td>
-        <td class="no"></td>
+        <td class="ok"></td>
         <td class="maybe"></td>
-        <td>Some modders working on this</td>
+        <td>Implemented on Saturn with volumetric rendering and a dedicated ring renderer. Some modders working on more.</td>
       </tr>
       <tr>
         <td>Tidal locking</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Bodies marked tidally locked rotate at their orbital period (Luna, Phobos, Deimos, Pan, etc.).</td>
       </tr>
       <tr>
         <td>Axial tilt / Obliquity</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Every body has a real axial tilt applied to its rotation (Earth 23.44 deg, Uranus 82.28 deg).</td>
       </tr>
       <tr>
         <td>Precession</td>
@@ -1785,9 +1785,9 @@
       </tr>
       <tr>
         <td>Procedural planets</td>
-        <td class="no"></td>
         <td class="maybe"></td>
-        <td>Some modders working on something similar in concept.
+        <td class="maybe"></td>
+        <td>Procedural terrain modifiers (simplex, erosion, craters) generate planet surfaces from authored seeds; no random planet generation. Some modders working on something similar in concept.
           <a href="https://forums.ahwoo.com/threads/polar-earth.204/#post-1019" target="_blank">
             (Awsomgamr999) PolarEarth
           </a>
@@ -1840,9 +1840,9 @@
     <tbody>
       <tr>
         <td>Cooperative / competitive multiplayer</td>
-        <td class="no"></td>
         <td class="maybe"></td>
-        <td>Some modders working on this.
+        <td class="maybe"></td>
+        <td>Client-server networking infrastructure (RakNet sessions, chat, player replication) exists in code, but there is no in-game multiplayer yet. Some modders working on this.
           <a href="https://forums.ahwoo.com/threads/ksa-multiplayer.637/" target="_blank">
             (RacerXx) KSA Multiplayer
           </a>
