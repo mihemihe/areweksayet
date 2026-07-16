@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 11th July 2026
+    Last update: 16th July 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -415,7 +415,7 @@
         <td>Cargo bays, service modules, payload mounts</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Some work in progres the by KSA team</td>
+        <td>Service module assets with internal storage connectors, cargo-bay tank assets exist. Work in progress by the KSA team.</td>
       </tr>
       <tr>
         <td>Rover frames</td>
@@ -497,7 +497,7 @@
         <td>Solid rocket boosters</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Few small SRB showcased (3D models)</td>
+        <td>Small SRB 3D models, plus larger SRB assets (CorePropulsion C, under the Booster editor tag) imported but not yet configured with engine data.</td>
       </tr>
       <tr>
         <td>Jet engines</td>
@@ -670,12 +670,8 @@
       <tr>
         <td>Rocket statistics (Δv, TWR, etc...)</td>
         <td class="ok"></td>
-        <td class="ok"></td>
-        <td>Basic statistics and gauges present; the stock staging window now shows live dV, TWR and Isp for the active sequence in flight. A mod extends the stock Stage/Sequence info panel, in flight and in the editor, with per-stage dV, TWR, burn time and ISP.
-          (Maxi) StageInfo -
-          <a href="https://forums.ahwoo.com/threads/stageinfo.905/" target="_blank">Forum</a> /
-          <a href="https://spacedock.info/mod/4256/StageInfo" target="_blank">Spacedock</a>
-        </td>
+        <td class="no"></td>
+        <td>Basic statistics and gauges present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight.</td>
       </tr>
       <tr>
         <td>Procedural parts</td>
@@ -740,12 +736,8 @@
       <tr>
         <td>Rocket statistics</td>
         <td class="ok"></td>
-        <td class="ok"></td>
-        <td>Basic statistics present; the stock staging window now shows live dV, TWR and Isp for the active sequence in flight. A mod extends the stock Stage/Sequence info panel, in flight and in the editor, with per-stage dV, TWR, burn time and ISP.
-          (Maxi) StageInfo -
-          <a href="https://forums.ahwoo.com/threads/stageinfo.905/" target="_blank">Forum</a> /
-          <a href="https://spacedock.info/mod/4256/StageInfo" target="_blank">Spacedock</a>
-        </td>
+        <td class="no"></td>
+        <td>Basic statistics present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight.</td>
       </tr>
       <tr>
         <td>Orbital parameters readouts</td>
@@ -870,13 +862,13 @@
         <td>Fuel crossfeed</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Propellant drains by part-tree graph with stage-aware ordering, plus player-defined one- or two-way fuel lines across decouplers and unconnected parts (scaffolding UI, dedicated fuel-port parts pending).</td>
+        <td>Propellant drains by part-tree graph with stage-aware ordering, plus player-defined one- or two-way fuel lines across decouplers and unconnected parts. Dedicated fuel-port parts now exist (placeholder art), with asparagus-aware drain ordering and a per-tank propellant-use toggle that can wall a tank off from engines and crossfeed.</td>
       </tr>
       <tr>
         <td>Resource transfer</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>In-flight tank-to-tank fuel pump transfer: mark tanks In or Out from the part window and matching propellant moves between them at a fixed rate, drawing electrical power while it flows. An empty receiving tank adopts the donor's propellant mix.</td>
       </tr>
       <tr>
         <td>Resource harvesting (Space, surfaces)</td>
@@ -1372,7 +1364,7 @@
         <td>Engine plume visuals</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Implemented but WIP</td>
+        <td>Implemented but WIP; experimental volumetric plume trails added (off by default).</td>
       </tr>
       <tr>
         <td>Reentry effects</td>
