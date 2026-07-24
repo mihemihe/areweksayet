@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 16th July 2026
+    Last update: 24th July 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -495,9 +495,9 @@
       </tr>
       <tr>
         <td>Solid rocket boosters</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Small SRB 3D models, plus larger SRB assets (CorePropulsion C, under the Booster editor tag) imported but not yet configured with engine data.</td>
+        <td>Functional solid rocket motors. Boosters are built from stackable grain segments (more segments mean more propellant and thrust), with a selectable grain geometry per segment (neutral, progressive, regressive, boost-sustain) that sets the thrust profile over the burn. SRB size D and E parts ship under the Booster editor tag.</td>
       </tr>
       <tr>
         <td>Jet engines</td>
@@ -1364,7 +1364,7 @@
         <td>Engine plume visuals</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Implemented but WIP; experimental volumetric plume trails added (off by default).</td>
+        <td>Implemented but WIP. Volumetric plume trails are now enabled by default on solid rocket motors, with plume drift, dynamic segment merging and a distance-based LOD system.</td>
       </tr>
       <tr>
         <td>Reentry effects</td>
@@ -1613,9 +1613,9 @@
       </tr>
       <tr>
         <td>Configurable UI (drag, hide, scale, etc...)</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>HUD gauges can be repositioned and resized, and any arrangement saved as a named HUD layout. A management window assigns per-layout hotkeys and a default, and layouts can be switched in flight via hotkeys.</td>
       </tr>
       <tr>
         <td>Accessibility options</td>
