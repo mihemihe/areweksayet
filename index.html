@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 28th July 2026
+    Last update: 2nd August 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -86,7 +86,7 @@
         <td>Physics simulation</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. No soft-body or aero-lift yet.</td>
+        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits. No soft-body or aero-lift yet.</td>
       </tr>
       <tr>
         <td>Aerodynamics and atmospheres</td>
@@ -98,7 +98,7 @@
         <td>Kittens!</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Cute!</td>
+        <td>Cute! Each save now has a persistent kitten roster with crew assignment in the editor and launch menu, seat-level boarding and EVA, per-kitten mission stats and a memorial list.</td>
       </tr>
       <tr>
         <td>Rocket construction</td>
@@ -124,9 +124,9 @@
       </tr>
       <tr>
         <td>Space center and launch complex</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Placeholder launch pad structures exist at launch sites, with collision and a vegetation exclusion zone. No buildings or facilities yet.</td>
       </tr>
       <tr>
         <td>Tech tree and science collection</td>
@@ -170,7 +170,7 @@
         <td>Maneuvering nodes</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Functional. Crude UI. Execution limited to one maneuvering node. (If multiple, none of them will execute)
+        <td>Functional. Burns are created by left-click or a right-click menu with apsis and node snapping, warp-to-point, and circularize / match-target-plane presets; chained burns plan on the final post-burn trajectory. Auto-execution handles one burn at a time.
         </td>
       </tr>
       <tr>
@@ -195,9 +195,9 @@
       </tr>
       <tr>
         <td>Automatic maneuvers (circularice, rendezvous, etc...)</td>
-        <td class="maybe"></td>
         <td class="ok"></td>
-        <td>Stock Transfer Planner can create circularize burns (apoapsis or periapsis); no stock auto-rendezvous yet. A mod adds dedicated plan types the stock planner lacks: set apoapsis or periapsis to a target altitude, match a target's orbital plane, or set an absolute inclination, each as a single or multi-pass burn.
+        <td class="ok"></td>
+        <td>Stock creates circularize burns from the Transfer Planner or the right-click orbit menu (any point, with apsis snapping) and match-target-plane burns at the nodes; no stock auto-rendezvous yet. A mod adds dedicated plan types the stock planner lacks: set apoapsis or periapsis to a target altitude, match a target's orbital plane, or set an absolute inclination, each as a single or multi-pass burn.
           (Maxi) AdvancedFlightComputer -
           <a href="https://forums.ahwoo.com/threads/advanced-flight-computer.783/" target="_blank">Forum</a> /
           <a href="https://spacedock.info/mod/4253/AdvancedFlightComputer" target="_blank">Spacedock</a>
@@ -671,7 +671,7 @@
         <td>Rocket statistics (Δv, TWR, etc...)</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Basic statistics and gauges present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight.</td>
+        <td>Basic statistics and gauges present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight. The readouts count only engines that can actually produce thrust, and TWR accounts for atmospheric pressure.</td>
       </tr>
       <tr>
         <td>Procedural parts</td>
@@ -737,7 +737,7 @@
         <td>Rocket statistics</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Basic statistics present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight.</td>
+        <td>Basic statistics present; the stock staging window now shows live dV, TWR and per-engine fuel bars for the active sequence in flight. The readouts count only engines that can actually produce thrust, and TWR accounts for atmospheric pressure.</td>
       </tr>
       <tr>
         <td>Orbital parameters readouts</td>
@@ -1184,9 +1184,9 @@
       </tr>
       <tr>
         <td>Engine reliability and structural failures</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Vehicles are destroyed when exceeding a structural g-limit or dynamic pressure limit, including terrain, ocean and vehicle impacts. Whole-vehicle only, with no per-part failures and no engine reliability model yet.</td>
       </tr>
       <tr>
         <td>Part failures, like Parachute failures</td>
@@ -1204,7 +1204,7 @@
         <td>Crew proficiency and experience</td>
         <td class="no"></td>
         <td class="no"></td>
-        <td>No info yet.</td>
+        <td>The kitten roster tracks per-kitten mission count, mission time, distance travelled and fastest speed. No proficiency or experience effects yet.</td>
       </tr>
       <tr>
         <td>Day/Night thermal cycles</td>
@@ -1272,9 +1272,9 @@
       </tr>
       <tr>
         <td>Stage recovery</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Landed vehicles on the home body can be recovered from the escape menu or the universe manifest. No refunds and no automated recovery of dropped stages yet.</td>
       </tr>
       <tr>
         <td>Mission simulation</td>
