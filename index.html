@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 2nd August 2026
+    Last update: 5th August 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -98,7 +98,7 @@
         <td>Kittens!</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Cute! Each save now has a persistent kitten roster with crew assignment in the editor and launch menu, seat-level boarding and EVA, per-kitten mission stats and a memorial list.</td>
+        <td>Cute! Each save now has a persistent kitten roster with crew assignment in the editor and launch menu, seat-level boarding and EVA, per-kitten mission stats and a memorial list. Kittens walk, run and jump on planet surfaces.</td>
       </tr>
       <tr>
         <td>Rocket construction</td>
@@ -110,7 +110,7 @@
         <td>Attitude control and RCS</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Functional but WIP.</td>
+        <td>Functional but WIP. The control point can be moved to any part with a control module or a docking port ("Control From Here"), which shifts the origin and orientation that attitude control and RCS translation work in.</td>
       </tr>
       <tr>
         <td>Staging</td>
@@ -318,9 +318,10 @@
       </tr>
       <tr>
         <td>G-forces</td>
-        <td class="no"></td>
+        <td class="maybe"></td>
         <td class="maybe"></td>
         <td>
+          Vehicles track peak g-load against a size-scaled structural limit (50 g at 5 m radius, floor 5 g) and are destroyed above it. On-screen alerts warn at 70% and 85% of the g-force or dynamic-pressure limit. No crew g-effects such as blackout yet.
           Some modders working on a mod for this.
           <a href="https://forums.ahwoo.com/threads/g-effects.635/" target="_blank">
             (AMPW) G Effects
@@ -403,13 +404,13 @@
         <td>Interstages (decouplers, separators, payload adapters)</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Multiple functional decouplers and interstages including a radial decoupler.</td>
+        <td>Multiple functional decouplers and interstages including a radial decoupler. A part's decoupler modules can be switched off individually, which turns an adapter or interstage into a static shroud and hides it from the sequence window.</td>
       </tr>
       <tr>
         <td>Fairings</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>First commits including fairings and interstages.</td>
+        <td>A CoreFairingA part set ships: twelve interstage shrouds that carry their own decouplers, five interstage bridges plus two petal bridges, seven aeroshroud half-shells, two SRB forward skirts and eight nose cones, all with computed structural masses. No procedural fairing builder that wraps an arbitrary payload yet.</td>
       </tr>
       <tr>
         <td>Cargo bays, service modules, payload mounts</td>
@@ -441,15 +442,15 @@
       </tr>
       <tr>
         <td>Nose cones</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Eight nose cones from 0.5 m to 3 m, as blunt caps and tangent-ogive profiles including two canted ones, with colliders and computed structural masses.</td>
       </tr>
       <tr>
         <td>Stack adapters</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Interstage bridge parts (2W-to-1W, 3W-to-2W) act as stack adapters.</td>
+        <td>Interstage bridge parts (half-W-to-1W, 2W-to-1W, 3W-to-2W, plus two petal variants) act as stack adapters.</td>
       </tr>
       <tr>
         <td>Radial attachments</td>
@@ -623,7 +624,7 @@
         <td>Docking Ports</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Three docking ports with dock/undock, vehicle merge/split, proximity camera and closure-velocity HUD.</td>
+        <td>Three docking ports with dock/undock, vehicle merge/split, proximity camera and closure-velocity HUD. Right-clicking another vehicle's port targets that specific port, and the control point can be moved onto a port.</td>
       </tr>
       <tr>
         <td>Grabbing unit</td>
@@ -785,7 +786,7 @@
         <td>Docking mode and automatic docking</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Manual docking supported (docking camera, proximity readouts, Dock attitude frame). No automatic approach and docking yet.</td>
+        <td>Manual docking supported (docking camera, proximity readouts, Dock attitude frame). Targeting resolves to a specific docking port and the Dock (TGT) frame aligns to it even when the port is off the target's centerline. No automatic approach and docking yet.</td>
       </tr>
       <tr>
         <td>Flight computers and scripting (KOS like)</td>
@@ -1196,9 +1197,9 @@
       </tr>
       <tr>
         <td>G-limits for crew</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Kittens on EVA are simulated as vehicles with their own g-load limit, 2.5x the structural limit for their size, and are destroyed by hard enough impacts. No g-tolerance model for crew riding inside a vehicle.</td>
       </tr>
       <tr>
         <td>Crew proficiency and experience</td>
@@ -1382,7 +1383,7 @@
         <td>First person EVA</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Regular EVA is possible. No first person.</td>
+        <td>Regular EVA is possible, including walking, running and jumping on planet surfaces. No first person.</td>
       </tr>
       <tr>
         <td>Camera effects (shaking, etc...)</td>
