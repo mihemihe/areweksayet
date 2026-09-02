@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 26th August 2026
+    Last update: 2nd September 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -86,7 +86,7 @@
         <td>Physics simulation</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits. Ground clutter can be collided with and destroyed. No soft-body or aero-lift yet.</td>
+        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits, and individual parts break off under contact load, so a craft coming apart leaves wreckage that is tracked as debris. Ground clutter can be collided with and destroyed. No soft-body or aero-lift yet.</td>
       </tr>
       <tr>
         <td>Aerodynamics and atmospheres</td>
@@ -277,9 +277,9 @@
       </tr>
       <tr>
         <td>Parachutes</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>A parachute bay part ships with an animated door, but no parachute itself: no canopy, deployment or drag model yet.</td>
+        <td>Functional but WIP. A parachute bay with packed drogue and main canopies ships alongside four radial chute parts, and a chute runs through arm, line stretch, reefed, dis-reef and full, and can be cut. A reefed canopy pulls less than an open one, and a canopy rips or sheds its lines when it is loaded past its burst pressure or line rating. Canopy count, diameter, reef ratio and duration, riser length, deploy altitude and the dis-reef g-limit are set per part in the editor. Canopy cloth is simulated up to 30x time warp and is visual only.</td>
       </tr>
       <tr>
         <td>Landing gear and steering</td>
@@ -586,9 +586,9 @@
       </tr>
       <tr>
         <td>Parachutes</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>A parachute bay part ships with an animated door, but no parachute itself: no canopy, deployment or drag model yet.</td>
+        <td>Functional but WIP. A parachute bay with packed drogue and main canopies ships alongside four radial chute parts, and a chute runs through arm, line stretch, reefed, dis-reef and full, and can be cut. A reefed canopy pulls less than an open one, and a canopy rips or sheds its lines when it is loaded past its burst pressure or line rating. Canopy count, diameter, reef ratio and duration, riser length, deploy altitude and the dis-reef g-limit are set per part in the editor. Canopy cloth is simulated up to 30x time warp and is visual only.</td>
       </tr>
       <tr>
         <td>Solar panels</td>
@@ -1187,13 +1187,13 @@
         <td>Engine reliability and structural failures</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Vehicles are destroyed when exceeding a structural g-limit or dynamic pressure limit, including terrain, ocean and vehicle impacts. Whole-vehicle only, with no per-part failures and no engine reliability model yet.</td>
+        <td>Vehicles are destroyed when exceeding a structural g-limit or dynamic pressure limit, including terrain, ocean and vehicle impacts. Contact pressure is accumulated per part through a collision and a part fails once it goes past its crash tolerance. No engine reliability model yet.</td>
       </tr>
       <tr>
         <td>Part failures, like Parachute failures</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Parts break under impact loads: each part accumulates contact pressure and fails once it passes its crash tolerance, then is isolated from its craft and destroyed, leaving debris behind. Parachute canopies rip or shed their lines when they are loaded past their burst pressure or line rating. No wear, ageing or random failures yet.</td>
       </tr>
       <tr>
         <td>G-limits for crew</td>
