@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 15th September 2026
+    Last update: 25th September 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -86,7 +86,7 @@
         <td>Physics simulation</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits, and individual parts break off under contact load, so a craft coming apart leaves wreckage that is tracked as debris, also across save and load. Impacts leave visual dents in the parts they hit, and a destroyed part or vehicle explodes. Ground clutter can be collided with and destroyed. No soft-body or aero-lift yet.</td>
+        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits, and individual parts break off under contact load, so a craft coming apart leaves wreckage that is tracked as debris, also across save and load. Impacts leave visual dents in the parts they hit, and a destroyed part or vehicle explodes. Ground clutter can be collided with, pushed aside and destroyed. No soft-body or aero-lift yet.</td>
       </tr>
       <tr>
         <td>Aerodynamics and atmospheres</td>
@@ -117,9 +117,10 @@
         <td class="ok"></td>
         <td class="ok"></td>
         <td>Functional staging. Sequences are the activation groups. Stages are part groupings.
-          (Maxi) AutoStage -
-          <a href="https://forums.ahwoo.com/threads/autostage.891/" target="_blank">Forum</a> /
-          <a href="https://spacedock.info/mod/4254/AutoStage" target="_blank">Spacedock</a>
+          A mod stages automatically when the active stage burns out.
+          (Maxi) AdvancedFlightComputer -
+          <a href="https://forums.ahwoo.com/threads/advanced-flight-computer.783/" target="_blank">Forum</a> /
+          <a href="https://spacedock.info/mod/4253/AdvancedFlightComputer" target="_blank">Spacedock</a>
         </td>
       </tr>
       <tr>
@@ -191,6 +192,10 @@
           (Maxi) AdvancedFlightComputer -
           <a href="https://forums.ahwoo.com/threads/advanced-flight-computer.783/" target="_blank">Forum</a> /
           <a href="https://spacedock.info/mod/4253/AdvancedFlightComputer" target="_blank">Spacedock</a>
+          Another mod draws an interactive delta-v subway map of the loaded system with a transfer-window planner.
+          (Maxi) DeltaVMap -
+          <a href="https://forums.ahwoo.com/threads/deltavmap.978/" target="_blank">Forum</a> /
+          <a href="https://spacedock.info/mod/4294/DeltaVMap" target="_blank">Spacedock</a>
         </td>
       </tr>
       <tr>
@@ -231,8 +236,12 @@
       <tr>
         <td>Ascension automation (PVG like)</td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td class="ok"></td>
+        <td>No stock ascent guidance. A mod flies closed-loop UPFG ascent guidance to a target periapsis, apoapsis, inclination and LAN.
+          (Maxi &amp; cairn5) AdvancedFlightComputer -
+          <a href="https://forums.ahwoo.com/threads/advanced-flight-computer.783/" target="_blank">Forum</a> /
+          <a href="https://spacedock.info/mod/4253/AdvancedFlightComputer" target="_blank">Spacedock</a>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -398,7 +407,7 @@
         <td>Fuel tanks</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Cylindrical (1m, 2m, 3m) and radial spherical tanks.</td>
+        <td>Cylindrical (1m, 2m, 3m) and radial spherical tanks. Five nose cones and two diameter adapters are fuel tanks too.</td>
       </tr>
       <tr>
         <td>Interstages (decouplers, separators, payload adapters)</td>
@@ -444,13 +453,13 @@
         <td>Nose cones</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Eight nose cones from 0.5 m to 3 m, as blunt caps and tangent-ogive profiles including two canted ones, with colliders and computed structural masses.</td>
+        <td>Eight nose cones from 0.5 m to 3 m, as blunt caps and tangent-ogive profiles including two canted ones, with colliders and computed structural masses. Five of them are fuel tanks that hold propellant.</td>
       </tr>
       <tr>
         <td>Stack adapters</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Interstage bridge parts (half-W-to-1W, 2W-to-1W, 3W-to-2W, plus two petal variants) act as stack adapters.</td>
+        <td>Interstage bridge parts (half-W-to-1W, 2W-to-1W, 3W-to-2W, plus two petal variants) act as stack adapters. The 2W-to-1W and 3W-to-2W bridges are fuel tanks that hold propellant.</td>
       </tr>
       <tr>
         <td>Radial attachments</td>
@@ -779,8 +788,12 @@
       <tr>
         <td>Landing guidance and suicide burn</td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td class="ok"></td>
+        <td>No stock landing guidance. A mod flies a deorbit burn and a fuel-optimal powered descent (G-FOLD) with a terminal hover to touchdown, and brings a separated booster back to its landing site.
+          (Maxi &amp; cairn5) AdvancedFlightComputer -
+          <a href="https://forums.ahwoo.com/threads/advanced-flight-computer.783/" target="_blank">Forum</a> /
+          <a href="https://spacedock.info/mod/4253/AdvancedFlightComputer" target="_blank">Spacedock</a>
+        </td>
       </tr>
       <tr>
         <td>Docking mode and automatic docking</td>
@@ -1275,7 +1288,7 @@
         <td>Stage recovery</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Landed vehicles on the home body can be recovered from the escape menu or the universe manifest. Recovering a vehicle also removes the debris in its physics bubble. No refunds and no automated recovery of dropped stages yet.</td>
+        <td>Landed vehicles on the home body can be recovered from the escape menu or the universe manifest. Recovering a vehicle also removes the debris in its physics bubble, and a Clear Debris button in the universe manifest deletes all debris in the current system. No refunds and no automated recovery of dropped stages yet.</td>
       </tr>
       <tr>
         <td>Mission simulation</td>
@@ -1365,7 +1378,7 @@
         <td>Engine plume visuals</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Implemented but WIP. Volumetric plume trails are enabled by default on solid rocket motors, with plume drift, dynamic segment merging and a distance-based LOD system. Nearby volumetric exhausts merge into one combined plume.</td>
+        <td>Implemented but WIP. Volumetric plume trails are enabled by default on solid rocket motors, with plume drift, dynamic segment merging and a distance-based LOD system. Nearby volumetric exhausts merge into one combined plume, and exhausts blend correctly with clouds, plume trails and explosions.</td>
       </tr>
       <tr>
         <td>Reentry effects</td>
@@ -1395,7 +1408,7 @@
         <td>Surface details (rocks, trees, craters,etc...)</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Ground clutter (rocks, trees and vegetation by ecotype) and procedural craters, dunes and erosion, with a quality toggle. Clutter colliders reach the physics simulation and a hard enough impact destroys the clutter it strikes.</td>
+        <td>Ground clutter (rocks, trees and vegetation by ecotype) and procedural craters, dunes and erosion, with a quality toggle. Clutter colliders reach the physics simulation and a hard enough impact destroys the clutter it strikes. A vehicle can push rocks and trees aside, which then roll and settle as physics objects, and cleared or moved clutter is kept in the save.</td>
       </tr>
       <tr>
         <td>Dynamic and immersive music</td>
@@ -1540,7 +1553,7 @@
         <td>Customizable keybinds</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Functional</td>
+        <td>Functional. Actions can be bound to keyboard keys or mouse buttons, each with modifier keys.</td>
       </tr>
       <tr>
         <td>Controller support</td>
@@ -1600,7 +1613,8 @@
         <td>Mod management (CKAN)</td>
         <td class="no"></td>
         <td class="maybe"></td>
-        <td>Some modders are working on this.
+        <td>Some modders are working on this. Borea, a community content manager, installs and updates mods from the community index.
+          <a href="https://ksamodding.github.io/Borea/" target="_blank">(KSAModding) Borea</a>
           <a href="https://spacedock.info/mod/4048/KSA%20Mod%20Manager%20(KSAMM)" target="_blank">
             (Awsomgamr999) KSAMM
           </a>
@@ -1773,7 +1787,7 @@
         <td>Planetary rings</td>
         <td class="ok"></td>
         <td class="maybe"></td>
-        <td>Implemented on Saturn with volumetric rendering and a dedicated ring renderer. Some modders working on more.</td>
+        <td>Implemented on Saturn with volumetric rendering and a dedicated ring renderer. The rings cast volumetric shadows on the planet's atmosphere. Some modders working on more.</td>
       </tr>
       <tr>
         <td>Tidal locking</td>
