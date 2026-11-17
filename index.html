@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 8th November 2026
+    Last update: 17th November 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -86,13 +86,13 @@
         <td>Physics simulation</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>6-DOF rigid-body physics with collisions, basic drag, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits, and individual parts break off under contact load, so a craft coming apart leaves wreckage that is tracked as debris, also across save and load. Impacts leave visual dents in the parts they hit, and a destroyed part or vehicle explodes. Ground clutter can be collided with, pushed aside and destroyed. No soft-body or aero-lift yet.</td>
+        <td>6-DOF rigid-body physics with collisions, aerodynamic forces, buoyancy and thrust. Vehicles can be destroyed by impacts or by exceeding structural g and dynamic pressure limits, and individual parts break off under contact load, so a craft coming apart leaves wreckage that is tracked as debris, also across save and load. Impacts leave visual dents in the parts they hit, and a destroyed part or vehicle explodes. Ground clutter can be collided with, pushed aside and destroyed. No soft-body physics yet.</td>
       </tr>
       <tr>
         <td>Aerodynamics and atmospheres</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Atmospheric density and pressure drive drag and engine performance. Drag area is taken from the vehicle bounding box per axis and depends on which way the vehicle faces, so flying backwards costs much more drag than nose-first. Every atmosphere has a gas mixture (with an oxygen fraction) and a temperature profile by altitude. No lift or heating model yet.</td>
+        <td>Atmospheric density, pressure and temperature drive the aerodynamic loads and engine performance. Each vehicle gets an aero mesh built from the colliders of its parts, and a panel method gives Mach-dependent pressure, lift and skin friction, with panels in the wake of other parts shielded. The supersonic panel method is also used at subsonic speed for now. Every atmosphere has a gas mixture (with an oxygen fraction), a temperature profile by altitude and a dynamic viscosity. No heating model yet.</td>
       </tr>
       <tr>
         <td>Kittens!</td>
@@ -268,15 +268,15 @@
     <tbody>
       <tr>
         <td>Lift and drag</td>
-        <td class="maybe"></td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td>Drag is applied from a per-axis bounding-box drag area that depends on which way the vehicle faces, so a vehicle flying backwards has far more drag than one flying nose-first. No lift model.</td>
+        <td>Functional but WIP. Lift, pressure drag and skin friction come from an aero mesh that is built from the colliders of the parts of each vehicle, with Mach-dependent panel pressures and shielding of panels in the wake of other parts. The supersonic panel method is also used at subsonic speed for now. A per-axis bounding-box drag is the fallback while no aero mesh is available.</td>
       </tr>
       <tr>
         <td>Aerodynamics (FAR like)</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Partial. Aerodynamic forces and moments come from the actual part shapes (an aero mesh built from the part colliders), depend on Mach number and include lift and skin friction. No separate subsonic or transonic model yet, because the supersonic panel method is used at all speeds.</td>
       </tr>
       <tr>
         <td>Heat simulation</td>
@@ -298,9 +298,9 @@
       </tr>
       <tr>
         <td>Supersonic and hypersonic stability</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Partial. The panel method gives Mach-dependent aerodynamic moments about the center of mass, so the shape of a vehicle sets how stable it flies at supersonic and hypersonic speed. No stability readouts and no heating yet.</td>
       </tr>
       <tr>
         <td>Stability analysis (FAR like)</td>
@@ -381,7 +381,7 @@
         <td>Probe cores</td>
         <td class="ok"></td>
         <td class="maybe"></td>
-        <td>Small, medium and large probe cores with a control module and a battery are in the Capsules category. Some modders are working on more <a
+        <td>Small, medium and large probe cores with a control module and a battery are in the Capsules category. A probe core draws 3, 6 or 12 W, has a Power Switch (On, Off, Auto) and a Standby In Storms setting in the editor, and its avionics take radiation dose, reboot for 30 s after an upset and fail at their dose tolerance. An uncrewed vessel loses control when its probe core is out of power, off, rebooting or failed, and time warp stops 5 minutes before the power runs out. Some modders are working on more <a
             href="https://forums.ahwoo.com/threads/probe-parts-plus-features-3-probes-sputnik-luna-and-vega-also-restores-stock-apollo-csm-and-gemini-6a.433/"
             target="_blank">
             (Thoteus) Sputnik, Luna, and Vega
@@ -391,7 +391,7 @@
         <td>Living spaces and habitats</td>
         <td class="ok"></td>
         <td class="maybe"></td>
-        <td>Parts with a Habitat module split a vehicle into zones that are joined by crew passages and by open docking port hatches (Close Hatch and Open Hatch). A Habitat Zones window (Shift+F6) shows the zones, kittens can move between seats in a zone, and supplies can be transferred between storage parts of a zone. Every service module has a storage-free habitat, and supply lockers add storage. Some modders are working on a similar concept.
+        <td>Parts with a Habitat module split a vehicle into zones that are joined by crew passages and by open docking port hatches (Close Hatch and Open Hatch). A Life Support window (Shift+F6) shows the zones, kittens can move between seats in a zone, and supplies can be transferred between storage parts of a zone. Every service module has a storage-free habitat, and supply lockers add storage. The HM-2 and HM-3 habitat modules (placeholder art) add seats, storage and a polyethylene-lined storm shelter. Some modders are working on a similar concept.
           <a href="https://forums.ahwoo.com/threads/oneil-cylinder-mod.395/" target="_blank">
             (Kepeca) ONeilCylinder
           </a>
@@ -399,9 +399,9 @@
       </tr>
       <tr>
         <td>Avionics</td>
+        <td class="ok"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Functional on the stock probe cores. Their avionics have a radiation tolerance (100, 300 or 1000 Gy) and an upset dose: dose from radiation belts, cosmic rays and solar storms adds up, an upset reboots the core for 30 s, and the core fails at its tolerance. A core that is off or on standby takes half the dose, and it can go to standby during solar storms. No separate avionics parts.</td>
       </tr>
       <tr>
         <td>Fuel tanks</td>
@@ -579,7 +579,7 @@
         <td>Gimbal</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Functional gimbal on all shipping liquid engines, driven by the FlightComputer. The flight computer trims the engines so that thrust passes through the center of mass, and steers along the net thrust axis during burns.</td>
+        <td>Functional gimbal on all shipping liquid engines, driven by the FlightComputer. The flight computer trims the engines so that thrust passes through the center of mass, and steers along the net thrust axis during burns. Gimbals move at a finite rate, with a second-order response and a rate limit set by the slew rate of each engine, and the stock thrust vector control accounts for that lag.</td>
       </tr>
       <tr>
         <td>Wheels</td>
@@ -803,9 +803,9 @@
       </tr>
       <tr>
         <td>Flight computers and scripting (KOS like)</td>
-        <td class="no"></td>
+        <td class="maybe"></td>
         <td class="yes"></td>
-        <td>Modders working on this.
+        <td>A prototype of a programmable flight computer (kFS) is in the game but off by default. It is turned on with the KFS_PROTOTYPE=1 environment variable, the kfs console command or the kFS debug window, and its interfaces are not stable yet. Modders working on this.
           <a href="https://forums.ahwoo.com/threads/ksasm-v0-1-0.636/" target="_blank">
             (tom_is_unlucky) KSASM v0.1.0
           </a>
@@ -906,7 +906,7 @@
         <td>Power generation and storage</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Batteries, fixed and deployable solar panels, and lights as power consumers; managed by a power system.</td>
+        <td>Batteries, fixed and deployable solar panels, and lights and probe cores as power consumers; managed by a power system. Probe cores show their power status, and time warp stops 5 minutes before the probe cores of an uncrewed vessel run out of power.</td>
       </tr>
       <tr>
         <td>In-Situ construction and printing (Stationeers like)</td>
@@ -1182,7 +1182,7 @@
         <td>Life support (Kerbalism like)</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Kittens need air, water, food and CO2 removal. Oxygen and water come from Air and Water tanks, meals and CO2 scrubber canisters are kept in habitat storage and add mass. A kitten whose needs are not met gets degraded, then incapacitated, then dies, and the saved condition limits EVA, seat moves and vehicle control. A "Life support low" alert drops time warp, and the Kitten Roster shows condition and cause of death. Habitats in breathable air use the outside air, and an EVA suit carries 8 hours of oxygen, 1 L of water and one meal. Life support can be switched off in the startup configuration and Universe > Rules.</td>
+        <td>Kittens need air, water, food and CO2 removal. Oxygen and water come from Air and Water tanks, meals and CO2 scrubber canisters are kept in habitat storage and add mass. A kitten whose needs are not met gets impaired, then incapacitated, then dies, and the saved condition limits EVA, seat moves and vehicle control. A "Life support low" alert drops time warp, and the Kitten Roster shows condition and cause of death. A Life Support window (Shift+F6) shows supply bars per zone and transfers supplies, and a Crew Clock (Ctrl+F6) shows the next life support or radiation event for each vessel. A mission plan saved with the vehicle (destination, flyby, orbit or landing, return or one-way trip, stay) estimates the trip legs and the supplies each zone needs, and the launch checks those supplies and can stock them. Habitats in breathable air use the outside air, and an EVA suit carries 8 hours of oxygen, 1 L of water and one meal. Life support can be switched off in the startup configuration and Universe > Rules.</td>
       </tr>
       <tr>
         <td>Fuels boil-off</td>
@@ -1194,7 +1194,7 @@
         <td>Radiation belts, solar storms</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Kittens take radiation dose from planetary radiation belts, cosmic rays and solar storms. Stars have activity cycles, flares and CMEs, which cause particle events and geomagnetic storms. Hulls, cabin liners and tank contents shield the crew. At 1 Sv a kitten gets radiation sickness, at 4 Sv it dies, and past a 0.6 Sv lifetime dose it retires. A Space Weather window, map overlay and crew alerts show what is coming.</td>
+        <td>Kittens take radiation dose from planetary radiation belts, cosmic rays and solar storms. Stars have activity cycles, flares and CMEs, which cause particle events and geomagnetic storms. Hulls, cabin liners and tank contents shield the crew, and the HM-2 and HM-3 habitat modules have a storm shelter. Probe core avionics take dose too and can reboot or fail. At 1 Sv a kitten gets radiation sickness, at 4 Sv it dies, and past a 0.6 Sv lifetime dose it retires. A Space Weather window, map overlay and crew alerts show what is coming.</td>
       </tr>
       <tr>
         <td>Engine reliability and structural failures</td>
@@ -1206,7 +1206,7 @@
         <td>Part failures, like Parachute failures</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Parts break under impact loads: each part accumulates contact pressure and fails once it passes its crash tolerance, then is isolated from its craft and destroyed in an explosion, leaving debris behind. Parachute canopies rip or shed their lines when they are loaded past their burst pressure or line rating. No wear, ageing or random failures yet.</td>
+        <td>Parts break under impact loads: each part accumulates contact pressure and fails once it passes its crash tolerance, then is isolated from its craft and destroyed in an explosion, leaving debris behind. Parachute canopies rip or shed their lines when they are loaded past their burst pressure or line rating. Probe core avionics have radiation upsets that reboot them for 30 s, and fail at their dose tolerance. No mechanical wear or ageing failures yet.</td>
       </tr>
       <tr>
         <td>G-limits for crew</td>
@@ -1264,9 +1264,9 @@
       </tr>
       <tr>
         <td>Mission design (KSPTOT like)</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Partial. A mission plan in the Life Support window picks a destination body, a flyby, orbit or landing, a return or one-way trip and a stay, and estimates Hohmann transfer legs and the wait for a return window to size the supplies. The transfer planner opens on the mission destination. No trajectory optimizer like KSPTOT yet.</td>
       </tr>
       <tr>
         <td>Remote control</td>
@@ -1280,9 +1280,9 @@
       </tr>
       <tr>
         <td>Parts degradation (solar panels, batteries, etc...)</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Partial. Probe core avionics wear from radiation dose: they show as worn at 80% of their tolerance and fail at 100%. No degradation of solar panels or batteries yet.</td>
       </tr>
       <tr>
         <td>Stage recovery</td>
