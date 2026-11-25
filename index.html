@@ -33,7 +33,7 @@
     Progress tracking and status indicators are a community interpretation, not official statements.
   </div>
   <div class="sub-disclaimer warning-box">
-    Last update: 17th November 2026
+    Last update: 25th November 2026
   </div>
   <hr>
   <h2>KSA ecosystem features</h2>
@@ -127,7 +127,7 @@
         <td>Space center and launch complex</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>A modelled launch pad (pad deck, grates, crawler ramp and footpaths) stands at five launch sites (Cape Canaveral LC-39A, Vandenberg LC-4, Starbase OLM A, Guiana Space Centre ELA-4 and Mahia LC-1A), with collision, a vegetation exclusion zone and a terrain decal that flattens the ground around it. All five sites reuse the same pad model. No buildings or other facilities yet.</td>
+        <td>A modelled launch pad (pad deck, grates, crawler ramp and footpaths) stands at six launch sites (Cape Canaveral LC-39A, Vandenberg LC-4, Starbase OLM A, Guiana Space Centre ELA-4, Mahia LC-1A and Baikonur Site 1), with collision, a vegetation exclusion zone and a terrain decal that flattens the ground around it. All six sites reuse the same pad model. No buildings or other facilities yet.</td>
       </tr>
       <tr>
         <td>Tech tree and science collection</td>
@@ -481,9 +481,9 @@
       </tr>
       <tr>
         <td>Heat shields</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Heat shields of 2 m, 2.5 m and 3 m and matching heat shield fairings ship in a new Thermal part category, each with a decoupler, and cargo bays can carry the 2.5 m shield. They add mass only, because there is no reentry heating or ablation model yet.</td>
       </tr>
       <tr>
         <td>Launch escape system</td>
@@ -501,7 +501,7 @@
         <td>Liquid engines</td>
         <td class="ok"></td>
         <td class="no"></td>
-        <td>Multiple functional Hydrolox engines (LR91 variants, VTR-10). One _Dev engine uses a debug propellant.</td>
+        <td>Multiple functional Hydrolox engines (LR91 variants, VTR-10). Engines model their cycle: the LR91 family is gas-generator fed, with a turbine and pump power balance and its own turbine exhaust, and the small engines and RCS thrusters are pressure-fed. The engine designer takes feed pressure drop, turbomachinery efficiency and turbine inlet temperature. One _Dev engine uses a debug propellant.</td>
       </tr>
       <tr>
         <td>Solid rocket boosters</td>
@@ -1074,7 +1074,7 @@
         <td>Biomes</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Biomes defined for Earth, Luna, Venus and Mars; drive terrain visuals and ambient sound. No science gameplay tied to them yet.</td>
+        <td>Biomes defined for Earth, Luna, Venus and Mars; drive terrain visuals and ambient sound. Every biome is a destination: the game logs the first and the latest arrival there, and each kitten records its first visit (Debug > Show Destinations). No science gameplay tied to them yet.</td>
       </tr>
       <tr>
         <td>Tech tree</td>
@@ -1114,9 +1114,9 @@
       </tr>
       <tr>
         <td>Star systems and exoplanets discovery</td>
+        <td class="maybe"></td>
         <td class="no"></td>
-        <td class="no"></td>
-        <td>No info yet.</td>
+        <td>Groundwork only. Each body has a knowledge tier (12 reveal levels, saved per system), but every body starts fully known, so nothing is discovered in play yet.</td>
       </tr>
       <tr>
         <td>Exotic discoveries (pulsars, black holes, etc.)</td>
@@ -1266,7 +1266,7 @@
         <td>Mission design (KSPTOT like)</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>Partial. A mission plan in the Life Support window picks a destination body, a flyby, orbit or landing, a return or one-way trip and a stay, and estimates Hohmann transfer legs and the wait for a return window to size the supplies. The transfer planner opens on the mission destination. No trajectory optimizer like KSPTOT yet.</td>
+        <td>Partial. A mission plan in the Life Support window picks a destination body, a flyby, orbit or landing, a return or one-way trip and a stay, and estimates Hohmann transfer legs and the wait for a return window to size the supplies. The transfer planner opens on the mission destination, and the plan switches to the real arrival, departure and return times once they happen. No trajectory optimizer like KSPTOT yet.</td>
       </tr>
       <tr>
         <td>Remote control</td>
@@ -1300,7 +1300,7 @@
         <td>Launch complexes textures (Cape Canaveral, etc...)</td>
         <td class="maybe"></td>
         <td class="no"></td>
-        <td>The shipping launch pad carries its own texture atlas with an alpha-mapped gravel trim, and blends into the terrain around it. One generic pad is reused at all five launch sites, so there are no site-specific complexes yet.</td>
+        <td>The shipping launch pad carries its own texture atlas with an alpha-mapped gravel trim, and blends into the terrain around it. One generic pad is reused at all six launch sites, so there are no site-specific complexes yet.</td>
       </tr>
 
     </tbody>
@@ -1742,7 +1742,7 @@
         <td>Multiple star systems</td>
         <td class="ok"></td>
         <td class="maybe"></td>
-        <td>The SolSystemInterstellar and EarthOnlyInterstellar systems add Alpha Centauri, Barnard's Star and Tau Ceti with their known planets. Lighting and solar panels follow the nearest star. The Interstellar (Dense) system loads the catalogue stars within Tau Ceti's distance, including Sirius, Procyon, Epsilon Eridani and 61 Cygni with placeholder planets, and sky stars shift with parallax when you travel between stars. Custom star systems are possible via configuration files. Some modders working on this.
+        <td>The SolSystemInterstellar and EarthOnlyInterstellar systems add Alpha Centauri, Barnard's Star and Tau Ceti with their known planets. Lighting and solar panels follow the nearest star. The Interstellar (Dense) system loads the catalogue stars within Tau Ceti's distance, including Sirius, Procyon, Epsilon Eridani and 61 Cygni with placeholder planets, and sky stars shift with parallax when you travel between stars. Loading a save from another system switches the running game to that system, and the save list shows the system of each save. Custom star systems are possible via configuration files. Some modders working on this.
           <a href="https://forums.ahwoo.com/threads/alternate-reality-moonar-system-13-additional-moons-mynimas-saphina-kin-verbul-icar-strobok-insulus-rie-aphere-hex-resin-and-more.377/"
             target="_blank">
             (Thoteus) CustomMoonarSystem
